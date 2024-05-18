@@ -1,4 +1,4 @@
-.login-container {
+.signup-container {
     height: 100vh;
     display: flex;
     align-items: center;
@@ -6,9 +6,10 @@
     background-color: #121212;
   }
   
-  .login-card {
+  .signup-card {
     border-radius: 1rem;
     max-width: 400px;
+    width: 100%;
   }
   
   .input-wrapper {
@@ -31,13 +32,26 @@
     border-color: #ccc !important;
   }
   
-  .login-button {
+  .signup-button {
     margin-top: 20px;
     width: 100%;
     text-align: center;
   }
   
-  .social-buttons {
-    width: 100%;
-    justify-content: center;
+  @media (max-width: 768px) {
+    .signup-card {
+      width: 90%;
+    }
+  
+    .signup-container {
+      padding: 20px;
+    }
+  
+    .input-wrapper {
+      padding: 0 10px;
+    }
+  
+    .signup-button {
+      width: 90%;
+    }
   }  

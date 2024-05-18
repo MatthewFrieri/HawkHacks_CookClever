@@ -1,4 +1,5 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   MDBBtn,
   MDBContainer,
@@ -9,6 +10,7 @@ import {
   MDBInput,
   MDBIcon
 } from 'mdb-react-ui-kit';
+import './login.css';
 
 function Login() {
 
@@ -16,7 +18,15 @@ function Login() {
   const [passwordValue, setPasswordValue] = useState('')
   const [isValidLogin, setIsValidLogin] = useState(false)
 
+  useEffect(() => {
+    if (isValidLogin) {
+      handleLogin();
+    }
+  },[isValidLogin])
+
+
   function handleLoginClick() {
+
 
     // call the db and check if the credentials are valid
     fetch('http://localhost:5000/getpost', {
@@ -28,20 +38,22 @@ function Login() {
     .then((res) => res.json()
     .then((isValid) => {
       setIsValidLogin(isValid)
-
-      console.log(isValidLogin);
     })
     );
   }
 
+  const navigate = useNavigate();
 
-
+  const handleLogin = () => {
+    // Add login logic here
+    navigate('/home');
+  };
 
   return (
-    <MDBContainer fluid>
+    <MDBContainer fluid className="login-container">
       <MDBRow className='d-flex justify-content-center align-items-center h-100'>
         <MDBCol col='12'>
-          <MDBCard className='bg-dark text-white my-5 mx-auto' style={{ borderRadius: '1rem', maxWidth: '400px' }}>
+          <MDBCard className='bg-dark text-white my-5 mx-auto login-card'>
             <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
               <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
               <p className="text-white-50 mb-5">Please enter your login and password!</p>
@@ -51,7 +63,7 @@ function Login() {
               <MDBBtn onClick={handleLoginClick} outline className='mx-2 px-5' color='white' size='lg'>
                 Login
               </MDBBtn>
-              <div className='d-flex flex-row mt-3 mb-5'>
+              <div className='d-flex flex-row mt-3 mb-5 social-buttons'>
                 <MDBBtn tag='a' color='none' className='m-3' style={{ color: 'white' }}>
                   <MDBIcon fab icon='facebook-f' size="lg" />
                 </MDBBtn>
@@ -63,7 +75,9 @@ function Login() {
                 </MDBBtn>
               </div>
               <div>
-                <p className="mb-0">Don't have an account? <a href="#!" className="text-white-50 fw-bold">Sign Up</a></p>
+                <p className="mb-0">
+                  Don't have an account? <a href="/signup" className="text-white-50 fw-bold">Sign Up</a>
+                </p>
               </div>
             </MDBCardBody>
           </MDBCard>
