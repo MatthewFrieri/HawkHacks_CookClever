@@ -1,4 +1,4 @@
-import React from 'react';
+import { React, useState } from 'react';
 import {
   MDBBtn,
   MDBContainer,
@@ -11,6 +11,32 @@ import {
 } from 'mdb-react-ui-kit';
 
 function Login() {
+
+  const [usernameValue, setUsernameValue] = useState('')
+  const [passwordValue, setPasswordValue] = useState('')
+  const [isValidLogin, setIsValidLogin] = useState(false)
+
+  function handleLoginClick() {
+
+    // call the db and check if the credentials are valid
+    fetch('http://localhost:5000/getpost', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'}, 
+      body: JSON.stringify({ usernameValue, passwordValue })
+      }
+    )
+    .then((res) => res.json()
+    .then((isValid) => {
+      setIsValidLogin(isValid)
+
+      console.log(isValidLogin);
+    })
+    );
+  }
+
+
+
+
   return (
     <MDBContainer fluid>
       <MDBRow className='d-flex justify-content-center align-items-center h-100'>
@@ -19,10 +45,10 @@ function Login() {
             <MDBCardBody className='p-5 d-flex flex-column align-items-center mx-auto w-100'>
               <h2 className="fw-bold mb-2 text-uppercase">Login</h2>
               <p className="text-white-50 mb-5">Please enter your login and password!</p>
-              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email address' id='formControlLg' type='email' size="lg" />
-              <MDBInput wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Password' id='formControlLg' type='password' size="lg" />
+              <MDBInput value={usernameValue} onChange={(e) => {setUsernameValue(e.target.value)}} wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Email address' id='formControlLg' type='email' size="lg" />
+              <MDBInput value={passwordValue} onChange={(e) => {setPasswordValue(e.target.value)}} wrapperClass='mb-4 mx-5 w-100' labelClass='text-white' label='Password' id='formControlLg' type='password' size="lg" />
               <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
-              <MDBBtn outline className='mx-2 px-5' color='white' size='lg'>
+              <MDBBtn onClick={handleLoginClick} outline className='mx-2 px-5' color='white' size='lg'>
                 Login
               </MDBBtn>
               <div className='d-flex flex-row mt-3 mb-5'>
