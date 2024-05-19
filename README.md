@@ -19,8 +19,8 @@ front end skills and were able to try and connect our front end and back end.
 What's Next?
 Our next steps would involve fully improving our UI and functionality.
 
-<img width="344" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
 <img width="341" alt="DEMO2" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/f640c5ef-dce8-47de-8700-86bea85d21fa">
 <img width="342" alt="DEMO3" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/14ae1d5c-5e6f-4fd6-be24-8ea0e5271276">
+<img width="344" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
 
 Made by Naresh Godwin, Masood Ashrafi, Matthew Frieri, and Sehaj Lally in HawkHacks (Hackathon) 2024. All rights reserved.
