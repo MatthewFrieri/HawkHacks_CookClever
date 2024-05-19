@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from database import is_valid_credentials
+from database import is_valid_credentials, add_user
 from image_analysis import interpret_input
 
 app = Flask('my_server')
@@ -27,6 +27,13 @@ def imageanalysis():
     results = interpret_input(imageSrc, imageRequirements)
     return jsonify(results)
 
+@app.route('/adduser', methods=['POST'])
+def adduser():
+    data = request.json
+    username = data['usernameValue']
+    password = data['passwordValue']
+    response = add_user(username, password)
+    return jsonify(response)
 
 if __name__ == '__main__':
     app.run()

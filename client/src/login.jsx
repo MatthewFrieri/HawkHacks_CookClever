@@ -22,6 +22,9 @@ function Login() {
   useEffect(() => {
     if (isValidLogin) {
       handleLogin();
+      setIsValidLogin(false)
+      setUsernameValue('')
+      setPasswordValue('')
     }
   },[isValidLogin])
 

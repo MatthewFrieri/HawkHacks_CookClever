@@ -10,6 +10,10 @@ const Pasta = () => {
         navigate('/prep');
     };
 
+    const handleBack = () => {
+        navigate('/home');
+    };
+
     return (
         <div className="container">
             <h1 className="title">Classic Italian Pasta</h1>
@@ -47,6 +51,9 @@ const Pasta = () => {
             </div>
             <button onClick={handleNext} className="next-button">
                 Next
+            </button>
+            <button onClick={handleBack} className="back-button">
+                Back
             </button>
         </div>
     );
