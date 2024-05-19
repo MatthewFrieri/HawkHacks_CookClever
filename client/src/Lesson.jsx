@@ -43,11 +43,20 @@ const Lesson = () => {
                         <li>(1 can) Baby Corn</li>
                         <li>(x2) Chicken Breasts</li>
                     </div>
-                    <div className='pre'>
-
+                    <div className='prep-tools'>
+                        <h2>Ingredient Prep</h2>
+                        <li>(2 stocks) Broccoli</li>
+                        <li>(1x) Red Pepper</li>
+                        <li>(1 can) Baby Corn</li>
+                        <li>(x2) Chicken Breasts</li>
                     </div>
                 </div>
                 
+                <div className='prep-instrucstions'>
+                    <p>
+                        Instrctions: Upload an image of all your ingredients and tools lined up 
+                    </p>
+                </div>
                 <div className='prep-camera-component'>
                     <CameraComponent req={Requirements.one} stepNumber='one'
                     />

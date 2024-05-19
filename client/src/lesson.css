@@ -6,13 +6,25 @@ body {
 .lesson-container {
     display: flex;
     flex-direction: column;
-    background-color: white;
+    background-color: rgb(255, 192, 120);
     width: 100vw;
     height: 200vh;
 }
 
 .prep-ingre-tools {
     margin: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.prep-ingredients {
+    margin: 10px;
+    margin-top: 0;
+}
+
+.prep-tools {
+    margin: 10px;
+    margin-top: 0;
 }
 
 .prep-container {
@@ -20,12 +32,12 @@ body {
     width: 100vw;
 }
 
-
 .preparation-header {
     display: flex;
     width: 100%;
     height: 60px;
     align-items: center;
+    background-color: rgb(250, 154, 45);
 }
 
 .prep-back-button {
@@ -41,9 +53,8 @@ body {
 
 .prep-camera-component {
     display: flex;
-    align-content: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
 }
 
 .prep-footer {
@@ -51,7 +62,7 @@ body {
     position: absolute;
     height: 60px;
     width: 100%;
-    background-color: white;
+    background-color: rgb(250, 154, 45);
     bottom: 0;
     align-items: right;
     justify-content: right;

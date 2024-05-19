@@ -6,12 +6,18 @@ import './stirfry.css';
 const Stirfry = () => {
     const navigate = useNavigate();
 
+    const handleBack = () => {
+        navigate('/home');
+    };
+
     const handleNext = () => {
         navigate('/lesson');
     };
 
+
     return (
         <div className="container">
+            <button onClick={handleBack}>Back</button>
             <h1 className="title">Classic Italian Pasta</h1>
             <div className="top-section">
                 <img src={pastaImage} alt="Pasta" className="pasta-image" />

@@ -80,12 +80,12 @@ const CameraComponent = (
   }
 
   return (
-    <div>
+    <div className='camera-container'>
       {!isCameraOpen && !capturedPhoto && (
         <div
           style={{
-            width: '300px',
-            height: '200px',
+            width: '80vw',
+            height: '42vh',
             border: '2px solid black',
             display: 'flex',
             alignItems: 'center',
@@ -99,26 +99,28 @@ const CameraComponent = (
       )}
 
       {isCameraOpen && (
-        <div style={{ position: 'relative' }}>
+        <div className='webcam-active' onClick={capturePhoto}>
           <Webcam
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            style={{ width: '100vw', height: '100vh' }}
+            style={{ width: '80vw', height: '100vh', display: 'flex', marginTop: '-200px', top: '15vh'}}
+            mirrored={true}
           />
-          <button className='camera-button'
-            onClick={capturePhoto}>
-            Capture
-          </button>
         </div>
       )}
 
       {capturedPhoto && !isCameraOpen && (
         <div>
-          <img src={capturedPhoto} alt="Captured" />
-          <button onClick={() => setCapturedPhoto(null)}>Retake Photo</button>
+          <img style={{ width: '80vw', display: 'flex', top: '15vh'}} src={capturedPhoto} alt="Captured" onClick={() => setCapturedPhoto(null)}/>
         </div>
       )}
+
+      <div className=''>
+        <button className='Analyze'>
+          Analyze Image using A.I
+        </button>
+      </div>
     </div>
   );
 };
