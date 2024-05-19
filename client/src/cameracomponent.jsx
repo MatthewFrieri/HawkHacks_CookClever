@@ -9,13 +9,14 @@ const CameraComponent = (
   const { userId, setUserId } = useContext(MyContext);
   const { feedback, setFeedback } = useContext(FeedbackContext);
 
-
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [capturedPhoto, setCapturedPhoto] = useState(null);
   const [imageData, setImageData] = useState({
     imageSrc: '',
     imageRequirements: ''
     });
+
+  const [isAnalyze, setIsAnalyze] = useState(false);
 
   const webcamRef = useRef(null);
 
@@ -24,10 +25,14 @@ const CameraComponent = (
     setIsCameraOpen(true);
   };
 
+  const sendAnalysis = () => {
+    setIsAnalyze(prev => !prev)
+  }
+
   useEffect(() => {
     analyzeImage()
-  },[imageData])
-  
+  },[isAnalyze])
+
   const capturePhoto = useCallback(() => {
     const imagebase64 = webcamRef.current.getScreenshot();
     setCapturedPhoto(imagebase64);
@@ -117,7 +122,7 @@ const CameraComponent = (
       )}
 
       <div className=''>
-        <button className='Analyze'>
+        <button className='Analyze' onClick={sendAnalysis}>
           Analyze Image using A.I
         </button>
       </div>

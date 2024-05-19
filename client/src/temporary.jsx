@@ -9,7 +9,7 @@ function Temporary() {
 
 
    // call the db and check if the credentials are valid
-   fetch('http://127.0.0.1:5000/getuserpoints', {
+    fetch('http://127.0.0.1:5000/getuserpoints', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'}, 
     body: JSON.stringify({ userId })

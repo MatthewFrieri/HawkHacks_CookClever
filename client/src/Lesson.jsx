@@ -52,16 +52,20 @@ const Lesson = () => {
                     </div>
                 </div>
                 
-                <div className='prep-instrucstions'>
+                <div className='prep-instructions'>
                     <p>
-                        Instrctions: Upload an image of all your ingredients and tools lined up 
+                        Instructions: Upload an image of all your ingredients and tools lined up below:
                     </p>
                 </div>
                 <div className='prep-camera-component'>
-                    <CameraComponent req={Requirements.one} stepNumber='one'
+                    <CameraComponent req={Requirements.one} stepNumber='one' 
                     />
                 </div>
-                <p>{feedback.one}</p>
+                <div className='prep-results'>
+                    <p className='aa'>Results:</p>
+                    <p>{feedback.one}</p>
+                </div>
+                
                 <div className='prep-footer'>
                     <button className='prep-back-button' onClick={handleNext}>
                         <i class="fa-solid fa-2x fa-arrow-down"></i>
@@ -69,7 +73,10 @@ const Lesson = () => {
                 </div>
                 
             </div>
-            
+
+            <div className='sec2-container'>
+                
+            </div>
         </div>    
   );
 };
