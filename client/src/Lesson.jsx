@@ -84,6 +84,7 @@ const Lesson = () => {
                 
                 
                 <div className='prep-footer'>
+                    <h2>Next Step!</h2>
                     <button className='prep-back-button' onClick={handleNext}>
                         <i class="fa-solid fa-2x fa-arrow-down"></i>
                     </button>

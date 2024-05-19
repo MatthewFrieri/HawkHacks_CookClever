@@ -5,6 +5,10 @@
     border: 3px solid Black;
 }
 
+.header {
+    border-radius: 10px;
+}
+
 .container {
     display: flex;
     flex-direction: column;
