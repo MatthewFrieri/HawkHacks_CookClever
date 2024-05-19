@@ -13,7 +13,7 @@ const CameraComponent = () => {
   const webcamRef = useRef(null);
 
   const requirements = {
-    preperation: 'Cut the carrots into even slices'
+    preperation: 'make sure there are different types of food. make sure they are presented nicely'
   }
 
   const openCamera = () => {
@@ -24,20 +24,14 @@ const CameraComponent = () => {
     analyzeImage()
   },[imageData])
   
-  const Log = (e) => {
-    console.log(e)
-  }
-
   const capturePhoto = useCallback(() => {
     const imagebase64 = webcamRef.current.getScreenshot();
-    Log(imagebase64);
     setCapturedPhoto(imagebase64);
     setImageData({imageSrc: imagebase64, imageRequirements: requirements.preperation})
     setIsCameraOpen(false);
   }, [webcamRef]);
 
   function analyzeImage() {
-    console.log(imageData);
     fetch('http://127.0.0.1:5000/imageanalysis', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'}, 
@@ -47,6 +41,7 @@ const CameraComponent = () => {
     .then((res) => res.json()
     .then((data) => {
       console.log(data);
+      // NOW DO SOMETHING WITH IT
     })
     );
   }
