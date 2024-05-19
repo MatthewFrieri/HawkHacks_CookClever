@@ -4,17 +4,73 @@ body {
   padding: 0;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-}
-
 header {
   background-color: #f8f8f8;
   padding: 10px;
   width: 100%;
   text-align: left;
+  box-sizing: border-box;
+}
+
+.searchBar {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 200px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 20px;
+  justify-items: center; /* Center the grid items horizontally */
+}
+
+.content {
+  width: 100%;
+  max-width: 200px;
+  text-align: center;
+}
+
+.image {
+  width: 100%;
+  height: 150px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 16px;
+}
+
+.nextButton {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
 }
 
 .homeButton {
@@ -25,32 +81,4 @@ header {
   font-size: 16px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  width: 100%;
-}
-
-.content {
-  width: 100%;
-  max-width: 200px;
-  height: 200px;
-  margin: 10px 0;
-  text-align: center;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  object-fit: cover;
-}
-
-.description {
-  font-size: 16px;
 }
