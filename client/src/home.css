@@ -37,19 +37,20 @@ main {
 
 .content {
   width: 100%;
-  max-width: 600px;
+  max-width: 200px;
+  height: 200px;
   margin: 10px 0;
   text-align: center;
 }
 
 .image {
   width: 100%;
-  height: auto;
+  height: 100%;
   border: 1px solid #ddd;
   border-radius: 5px;
+  object-fit: cover;
 }
 
 .description {
-  margin: 10px 0;
   font-size: 16px;
 }
