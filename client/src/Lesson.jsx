@@ -34,6 +34,9 @@ const Lesson = () => {
                         <i class="fa-solid fa-2x fa-arrow-left"></i>
                     </button>
                     <h1>Preparation</h1>
+                    <div className='prep-points'>
+
+                    </div>
                 </div>
                 <div className='prep-ingre-tools'>
                     <div className='prep-ingredients'>
@@ -52,16 +55,24 @@ const Lesson = () => {
                     </div>
                 </div>
                 
-                <div className='prep-instrucstions'>
+                <div className='prep-instructions'>
                     <p>
-                        Instrctions: Upload an image of all your ingredients and tools lined up 
+                        Cooking Instructions: Gather all the ingredients and tool listed above, and prepare a clean works space. 
+                    </p>
+                    <b />       
+                    <p>
+                        Image Instructions: Take a picture of all your ingredients and tools lined up and click th analyze button to see how you did.
                     </p>
                 </div>
                 <div className='prep-camera-component'>
-                    <CameraComponent req={Requirements.one} stepNumber='one'
+                    <CameraComponent req={Requirements.one} stepNumber='one' 
                     />
                 </div>
-                <p>{feedback.one}</p>
+                <div className='prep-results'>
+                    <p className='aa'>Results:</p>
+                    <p>{feedback.one}</p>
+                </div>
+                
                 <div className='prep-footer'>
                     <button className='prep-back-button' onClick={handleNext}>
                         <i class="fa-solid fa-2x fa-arrow-down"></i>
@@ -69,7 +80,15 @@ const Lesson = () => {
                 </div>
                 
             </div>
-            
+
+            <div className='sec2-container'>
+                <div className='preparation-header'>
+                    <button className='prep-back-button' onClick={handleBack}>
+                        <i class="fa-solid fa-2x fa-arrow-left"></i>
+                    </button>
+                    <h1>Preparation</h1>
+                </div>
+            </div>
         </div>    
   );
 };

@@ -13,6 +13,7 @@ body {
 
 .prep-ingre-tools {
     margin: 10px;
+    margin-top: 60px;
     display: flex;
     flex-direction: row;
 }
@@ -34,10 +35,12 @@ body {
 
 .preparation-header {
     display: flex;
+    position: absolute;
     width: 100%;
     height: 60px;
     align-items: center;
     background-color: rgb(250, 154, 45);
+    border-radius: 10px;
 }
 
 .prep-back-button {
@@ -55,8 +58,32 @@ body {
     display: flex;
     justify-content: center;
     width: 100vw;
+    max-height: 300px;
 }
 
+.prep-instructions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+.prep-instructions p {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.prep-results {
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.aa {
+    font-size: 20px;
+}
 .prep-footer {
     display: flex;
     position: absolute;

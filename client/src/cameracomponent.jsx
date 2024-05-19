@@ -9,7 +9,6 @@ const CameraComponent = (
   const { userId, setUserId } = useContext(MyContext);
   const { feedback, setFeedback } = useContext(FeedbackContext);
 
-
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [capturedPhoto, setCapturedPhoto] = useState(null);
   const [imageData, setImageData] = useState({
@@ -17,17 +16,22 @@ const CameraComponent = (
     imageRequirements: ''
     });
 
-  const webcamRef = useRef(null);
+  const [isAnalyze, setIsAnalyze] = useState(false);
 
+  const webcamRef = useRef(null);
 
   const openCamera = () => {
     setIsCameraOpen(true);
   };
 
+  const sendAnalysis = () => {
+    setIsAnalyze(prev => !prev)
+  }
+
   useEffect(() => {
     analyzeImage()
-  },[imageData])
-  
+  },[isAnalyze])
+
   const capturePhoto = useCallback(() => {
     const imagebase64 = webcamRef.current.getScreenshot();
     setCapturedPhoto(imagebase64);
@@ -85,7 +89,7 @@ const CameraComponent = (
         <div
           style={{
             width: '80vw',
-            height: '42vh',
+            minHeight: '20vh',
             border: '2px solid black',
             display: 'flex',
             alignItems: 'center',
@@ -104,7 +108,7 @@ const CameraComponent = (
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            style={{ width: '80vw', height: '100vh', display: 'flex', marginTop: '-200px', top: '15vh'}}
+            style={{ width: '80vw', display: 'flex', top: '15vh'}}
             mirrored={true}
           />
         </div>
@@ -117,7 +121,7 @@ const CameraComponent = (
       )}
 
       <div className=''>
-        <button className='Analyze'>
+        <button className='Analyze' onClick={sendAnalysis}>
           Analyze Image using A.I
         </button>
       </div>
