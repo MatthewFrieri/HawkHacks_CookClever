@@ -1,17 +1,25 @@
 import React from 'react';
 import pastaImage from './assets/pasta.png';
 import roastChickenImage from './assets/roastchicken.png';
+import { useNavigate } from 'react-router-dom';
 import burritoBowl from './assets/burritobowl.png';
 import sandwich from './assets/sandwich.png';
 import './home.css'; // Make sure to import the CSS file
 
 const Home = () => {
+
+    const navigate = useNavigate();
+
+    const handleNext = () => {
+      navigate('/prep');
+    };
+
   return (
     
     <div className="container">
       <header>
         <button className="homeButton" onClick={() => window.location.href = '/'}>
-          Home
+          Log Out
         </button>
       </header>
       <main>
@@ -27,7 +35,10 @@ const Home = () => {
             <p className="description">
               This is a picture of roast chicken. It's a well-loved dish, perfect for any occasion.
             </p>
-          </div>
+            <button onClick={handleNext}>
+            Next
+          </button>
+        </div>
           <div className="content">
             <img src={burritoBowl} alt="Burrito Bowl" className="image" />
             <p className="description">

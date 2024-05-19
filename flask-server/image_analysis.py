@@ -48,22 +48,22 @@ def interpret_input(image, criteria):
     return response.text
 
 
-img = Image.open('flask-server/carrots.jpeg')
-requirements = 'cut the carrots into even pieces'
+# img = Image.open('flask-server/carrots.jpeg')
+# requirements = 'cut the carrots into even pieces'
 
-criteria = f'''
-The defined requirements are: {requirements}.
+# criteria = f'''
+# The defined requirements are: {requirements}.
 
-Return a python dictionary with the key "points" representing a score out of 10. 
-Establish this score based on how well it meets the defined requirements. 
-Also include the key "feedback" in the python dictionary, 
-representing some feedback based on how well the picture met the requirements.
-Give the feedback in a positive tone that promotes learning.'''
+# Return a python dictionary with the key "points" representing a score out of 10. 
+# Establish this score based on how well it meets the defined requirements. 
+# Also include the key "feedback" in the python dictionary, 
+# representing some feedback based on how well the picture met the requirements.
+# Give the feedback in a positive tone that promotes learning.'''
 
-response = interpret_input(img, criteria)
+# response = interpret_input(img, criteria)
 
-# prep the response format
-response = response[10:-3]
-response = json.loads(response)
+# # prep the response format
+# response = response[10:-3]
+# response = json.loads(response)
 
-print(response)
+# print(response)

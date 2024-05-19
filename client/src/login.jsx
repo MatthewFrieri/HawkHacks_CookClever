@@ -1,4 +1,5 @@
 import { React, useState, useEffect } from 'react';
+import CameraComponent from './cameracomponent';
 import { useNavigate } from 'react-router-dom';
 import {
   MDBBtn,
@@ -29,7 +30,7 @@ function Login() {
 
 
     // call the db and check if the credentials are valid
-    fetch('http://localhost:5000/getpost', {
+    fetch('http://127.0.0.1:5000/authentication', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'}, 
       body: JSON.stringify({ usernameValue, passwordValue })
