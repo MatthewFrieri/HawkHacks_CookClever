@@ -1,7 +1,6 @@
 import React, { useState, useRef, useCallback, useEffect, useContext } from 'react';
 import Webcam from 'react-webcam';
-import { MyContext, FeedbackContext } from './MyContext';
-import { PointsContext } from './MyContext';
+import { MyContext, FeedbackContext, PointsContext } from './MyContext';
 
 const CameraComponent = (
   {req, stepNumber}
@@ -125,7 +124,7 @@ const CameraComponent = (
         </div>
       )}
 
-      <div className=''>
+      <div className='Button'>
         <button className='Analyze' onClick={sendAnalysis}>
           Analyze Image using A.I
         </button>

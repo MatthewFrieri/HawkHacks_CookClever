@@ -1,78 +1,51 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+.top-section img {
+    width: 250px;
+    border-radius: 20px;
+    align-items: center;
+    border: 3px solid Black;
 }
 
 .container {
-    text-align: center;
-    padding: 10px;
-}
-
-.title {
-    font-size: 1.5em;
-    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 192, 120);
+    height: 100vh;
 }
 
 .top-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.stirfry-image {
-    max-width: 80%; /* Adjust the max-width to make the image smaller */
-    height: auto;
-    margin-bottom: 10px;
+    flex-direction: row;
+    margin: 10px;
 }
 
 .nutritional-facts {
-    text-align: left; /* Align text to the left for better readability */
-    max-width: 100%;
-    margin: 10px 0; /* Add margin to reduce the gap between image and text */
+    margin: 10px;
+    font: sans-serif bold;
 }
 
-.bottom-section {
+.start-button {
     display: flex;
-    flex-direction: column;
+    width: 100%;
     align-items: center;
-}
-
-.ingredients, .utensils {
-    width: 90%;
-    text-align: left;
-    margin-bottom: 10px;
+    justify-content: center;
 }
 
 .next-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 1em;
-    position: fixed;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    width: 100px;
+    height: 60px; 
+    background-color: rgb(187, 100, 0) ;
+    border: none;
+    color: white;
+    font-size: x-large;
+    border-radius: 10px;
+
 }
 
-@media (min-width: 414px) {
-    .top-section {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start; /* Align items to the start to reduce gap */
-    }
+.next-button:hover {
+    transform: scale(120%);
+}
 
-    .stirfry-image, .nutritional-facts {
-        max-width: 45%;
-    }
-
-    .bottom-section {
-        flex-direction: row; /* Arrange ingredients and utensils side by side */
-        justify-content: space-between;
-    }
-
-    .ingredients, .utensils {
-        width: 45%; /* Adjust width for better alignment */
-        margin-bottom: 0;
-    }
+.bottom-section {
+    margin: 10px;
 }

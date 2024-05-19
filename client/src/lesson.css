@@ -41,6 +41,7 @@ body {
     align-items: center;
     background-color: rgb(250, 154, 45);
     border-radius: 10px;
+    border-bottom: 4px solid black;
 }
 
 .prep-back-button {
@@ -56,7 +57,7 @@ body {
 
 .prep-points {
     position: absolute;
-    width: 60px;
+    width: 100px;
     height: 50px;
     background-color: rgb(187, 100, 0);
     justify-content: center;
@@ -64,6 +65,13 @@ body {
     border-radius: 10px;
     align-items: center;
     justify-content: center;
+    align-items: center;
+}
+
+.prep-points p {
+    margin-left: 15px;
+    font-weight: 300;;
+    color: white;
 }
 
 .prep-camera-component {
@@ -105,5 +113,6 @@ body {
     bottom: 0;
     align-items: right;
     justify-content: right;
+    border-top: 4px solid black;
 }
 

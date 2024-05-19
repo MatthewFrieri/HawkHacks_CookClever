@@ -56,7 +56,7 @@ function Signup() {
         </span>
         <span>
           <p>Password</p>
-          <MDBInput value={passwordValue} onChange={(e) => {setPasswordValue(e.target.value)}}t ype='password' />
+          <MDBInput value={passwordValue} onChange={(e) => {setPasswordValue(e.target.value)}} type='password' />
         </span>
         <span>
           <p>Confirm Password</p>

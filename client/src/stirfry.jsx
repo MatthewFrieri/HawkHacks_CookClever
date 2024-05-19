@@ -16,8 +16,12 @@ const Stirfry = () => {
 
     return (
         <div className="container">
-            <button onClick={handleBack}>Back</button>
-            <h1 className="title">Vegetarian Stirfry Mix</h1>
+            <header>
+                <button className='prep-back-button' onClick={handleBack}>
+                        <i class="fa-solid fa-2x fa-arrow-left"></i>
+                    </button>
+                <h1 className="title">Vegetarian Stirfry Mix</h1>
+            </header>
             <div className="top-section">
                 <img src={stirfryImage} alt="Stirfry" className="stirfry-image" />
                 <div className="nutritional-facts">
@@ -50,7 +54,10 @@ const Stirfry = () => {
                     </ul>
                 </div>
             </div>
-            <button onClick={handleNext} className="next-button">Next</button>
+            <div className='start-button'>
+                <button onClick={handleNext} className="next-button">Start</button>
+            </div>
+            
         </div>
     );
 };

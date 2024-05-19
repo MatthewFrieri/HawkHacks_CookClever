@@ -40,6 +40,15 @@
     width: 100%;
 }
 
+.Button {
+    display: flex;
+    width: 80%;
+    align-items: center;
+}
+
 .Analyze {
+    display: flex;
     justify-content: center;
+    color: rgb(255, 192, 120);
+
 }

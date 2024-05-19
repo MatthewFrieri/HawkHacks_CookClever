@@ -23,8 +23,8 @@ const Lesson = () => {
    
 
     const Requirements = {
-        one: 'The ingredients should be aligned.',
-        two: 'chop em up',
+        one: 'The image should contain the ingredients following: broccoli, red pepper, chicken breasts, baby corn, and carrots. The image should also contain the following tools: Knife, Cutting board, Bowls/containters. In the image, ALL the ingredients and tools listed visible and must clearly match all the ingredients and tools provided.',
+        two: 'The image should contain a pile of thinly slice carrots that are bit sized. The image should also contain diced onions that have been cut in such a manner. These two piles should be place seperate bowls. Comment on the images accuracy to this.',
         three: 'boil em away'
     }
 
@@ -39,44 +39,49 @@ const Lesson = () => {
                     </button>
                     <h1>Preparation</h1>
                     <div className='prep-points'>
-                        <p>{userPoints}</p>
+                        <p>Points: {userPoints}</p>
                     </div>
                 </div>
                 <div className='prep-ingre-tools'>
                     <div className='prep-ingredients'>
-                        <h2>Ingredient Prep</h2>
-                        <li>(2 stocks) Broccoli</li>
+                        <h3>Ingredient Prep</h3>
+                        <li>(2x) Broccoli</li>
                         <li>(1x) Red Pepper</li>
-                        <li>(1 can) Baby Corn</li>
-                        <li>(x2) Chicken Breasts</li>
+                        <li>(1x) Baby Corn</li>
+                        <li>(x2) Carrots</li>
                     </div>
                     <div className='prep-tools'>
-                        <h2>Ingredient Prep</h2>
-                        <li>(2 stocks) Broccoli</li>
-                        <li>(1x) Red Pepper</li>
-                        <li>(1 can) Baby Corn</li>
-                        <li>(x2) Chicken Breasts</li>
+                        <h3>Tools</h3>
+                        <li>Knife</li>
+                        <li>Cutting Board</li>
+                        <li>Bowls/Containers</li>
                     </div>
                 </div>
                 
                 <div className='prep-instructions'>
                     <p>
-                        Cooking Instructions: Gather all the ingredients and tool listed above, and prepare a clean works space. 
+                        Cooking Instructions: Gather all the ingredients and tool listed above, and prepare a clean works space.
                     </p>
                     <b />       
                     <p>
-                        Image Instructions: Take a picture of all your ingredients and tools lined up and click th analyze button to see how you did.
+                        Image Instructions: Take a picture of all your ingredients and tools lined up and click the analyze button to see how you did.
                     </p>
                 </div>
                 <div className='prep-camera-component'>
                     <CameraComponent req={Requirements.one} stepNumber='one' 
                     />
                 </div>
-                <div className='prep-results'>
+                
+                {
+                (feedback.one[0]) !== '' 
+                ? <div className='prep-results'>
                     <p className='aa'>Results:</p>
-                    <p>{feedback.one[0]}</p>
-                    <p>You earned {feedback.one[1]} points!</p>
-                </div>
+                    <p>{feedback.one[0]} You earned {feedback.one[1]} points!</p>
+                    </div> 
+                :
+                    null
+                }
+                
                 
                 <div className='prep-footer'>
                     <button className='prep-back-button' onClick={handleNext}>
@@ -93,6 +98,42 @@ const Lesson = () => {
                     </button>
                     <h1>Chopping</h1>
                 </div>
+                <div className='prep-ingre-tools'>
+                    <div className='prep-ingredients'>
+                        <h3>Ingredient Prep</h3>
+                        <li>(2x) Onion</li>
+                        <li>(x2) Carrots</li>
+                    </div>
+                    <div className='prep-tools'>
+                        <h3>Tools</h3>
+                        <li>Knife</li>
+                        <li>Cutting Board</li>
+                        <li>Bowls/Containers</li>
+                    </div>
+                </div>
+                
+                <div className='prep-instructions'>
+                    <p>
+                        Chopping Instructions: Cut the carrots in to thin slices that are bite size and place them in to a bowl. Dice the onions into a pill and place them in to a bowl aswell. 
+                    </p>
+                    <b />       
+                    <p>
+                        Image Instructions: Take a picutre of you work for analysis.
+                    </p>
+                </div>
+                <div className='prep-camera-component'>
+                    <CameraComponent req={Requirements.two} stepNumber='two' 
+                    />
+                </div>
+                {
+                (feedback.two[0]) !== '' 
+                ? <div className='prep-results'>
+                    <p className='aa'>Results:</p>
+                    <p>{feedback.two[0]} You earned {feedback.two[1]} points!</p>
+                    </div> 
+                :
+                    null
+                }
             </div>
         </div>    
   );
