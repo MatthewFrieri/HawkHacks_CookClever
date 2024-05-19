@@ -24,9 +24,9 @@ const FeedbackContext = createContext();
 
 const FeedbackProvider = ({ children }) => {
   const [feedback, setFeedback] = useState({
-    one: '',
-    two: '',
-    three: ''
+    one: ['', ''],
+    two: ['', ''],
+    three: ['', ''],
   })
 
   return (

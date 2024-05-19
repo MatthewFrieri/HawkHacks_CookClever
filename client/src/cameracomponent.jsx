@@ -54,7 +54,7 @@ const CameraComponent = (
       // update the right feedback
       setFeedback(prevState => ({
         ...prevState,
-        [stepNumber]: data.feedback
+        [stepNumber]: [data.feedback, data.points]
       }))
 
       // give points to the user

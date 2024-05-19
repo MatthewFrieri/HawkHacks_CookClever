@@ -70,7 +70,8 @@ const Lesson = () => {
                 </div>
                 <div className='prep-results'>
                     <p className='aa'>Results:</p>
-                    <p>{feedback.one}</p>
+                    <p>{feedback.one[0]}</p>
+                    <p>You earned {feedback.one[1]} points!</p>
                 </div>
                 
                 <div className='prep-footer'>

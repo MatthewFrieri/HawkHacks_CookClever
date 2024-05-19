@@ -1,43 +1,44 @@
-.login-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212;
-  }
+header {
+  background-color: rgb(250 154 45) !important;
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+#container {
+  background-color: rgb(255 192 120);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#square-container {
+  background-color: rgba(0, 0, 0, .1) !important;
+  border-radius: 20px;
+  width: 80%;
+  margin-top: 50px;
   
-  .login-card {
-    border-radius: 1rem;
-    max-width: 400px;
-  }
-  
-  .input-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .MDBInput {
-    width: 100%;
-  }
-  
-  .MDBInput label {
-    color: white !important;
-  }
-  
-  .MDBInput input {
-    color: white !important;
-    background-color: transparent !important;
-    border-color: #ccc !important;
-  }
-  
-  .login-button {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .social-buttons {
-    width: 100%;
-    justify-content: center;
-  }  
+}
+
+#btn1 {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 20px 0;
+}
+
+#msg {
+  text-align: center;
+  padding-top: 20px;
+}
+
+.loginspan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginspan p {
+  margin: 10px 10px 0 0;
+}

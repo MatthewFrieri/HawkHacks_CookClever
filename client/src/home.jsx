@@ -20,7 +20,6 @@ const Home = () => {
                 <input type="text" placeholder="Search..." className="searchBar" />
             </header>
             <main>
-                <Temporary></Temporary>
                 <div className="grid">
                     <div className="content">
                         <img src={stirfryImage} alt="Picture of Stirfry" className="image" />
@@ -51,11 +50,6 @@ const Home = () => {
                     Next
                 </button>
             </main>
-            <footer>
-                <button className="homeButton" onClick={() => window.location.href = '/'}>
-                    Log Out
-                </button>
-            </footer>
         </div>
     );
 };
