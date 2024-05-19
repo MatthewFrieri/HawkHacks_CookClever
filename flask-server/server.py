@@ -11,7 +11,6 @@ def getinfo():
     info = {"name":'mat', "age":"18"}
     return jsonify(info)
 
-
 @app.route('/authentication', methods=['POST'])
 def authentication():
     data = request.json
@@ -23,7 +22,6 @@ def authentication():
 @app.route('/imageanalysis', methods=['POST'])
 def imageanalysis():
     data = request.json
-    print(data)
     imageSrc = data['imageData']['imageSrc']
     imageRequirements = data['imageData']['imageRequirements']
     results = interpret_input(imageSrc, imageRequirements)
