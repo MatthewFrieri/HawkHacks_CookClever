@@ -1,6 +1,7 @@
-import React from 'react';
+import {React, useContext} from 'react';
 import CameraComponent from './cameracomponent';
 import { useNavigate } from 'react-router-dom';
+import { FeedbackContext } from './MyContext';
 import './lesson.css'
 
 const Lesson = () => {
@@ -15,11 +16,15 @@ const Lesson = () => {
 
     }
 
+    const { feedback, setFeedback } = useContext(FeedbackContext);
+
     const Requirements = {
-        Prep: 'The ingredients should be aligned.',
-        Chop: '',
-        Boil: '',
+        one: 'The ingredients should be aligned.',
+        two: 'chop em up',
+        three: 'boil em away'
     }
+
+    // console.log(Requirements.Prep);
     
   return (
         <div className='lesson-container'>
@@ -44,10 +49,10 @@ const Lesson = () => {
                 </div>
                 
                 <div className='prep-camera-component'>
-                    <CameraComponent 
-                    req = {Requirements.Prep}
+                    <CameraComponent req={Requirements.one} stepNumber='one'
                     />
                 </div>
+                <p>{feedback.one}</p>
                 <div className='prep-footer'>
                     <button className='prep-back-button' onClick={handleNext}>
                         <i class="fa-solid fa-2x fa-arrow-down"></i>

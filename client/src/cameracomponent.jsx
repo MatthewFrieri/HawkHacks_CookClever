@@ -1,10 +1,15 @@
-import React, { useState, useRef, useCallback, useEffect } from 'react';
+import React, { useState, useRef, useCallback, useEffect, useContext } from 'react';
 import Webcam from 'react-webcam';
+import { MyContext, FeedbackContext } from './MyContext';
 
 const CameraComponent = (
-  req
+  {req, stepNumber}
 ) => {
   
+  const { userId, setUserId } = useContext(MyContext);
+  const { feedback, setFeedback } = useContext(FeedbackContext);
+
+
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [capturedPhoto, setCapturedPhoto] = useState(null);
   const [imageData, setImageData] = useState({
@@ -14,9 +19,6 @@ const CameraComponent = (
 
   const webcamRef = useRef(null);
 
-  const requirements = {
-    preperation: 'make sure there are different types of food. make sure they are presented nicely'
-  }
 
   const openCamera = () => {
     setIsCameraOpen(true);
@@ -29,7 +31,7 @@ const CameraComponent = (
   const capturePhoto = useCallback(() => {
     const imagebase64 = webcamRef.current.getScreenshot();
     setCapturedPhoto(imagebase64);
-    setImageData({imageSrc: imagebase64, imageRequirements: requirements.preperation})
+    setImageData({imageSrc: imagebase64, imageRequirements: req})
     setIsCameraOpen(false);
   }, [webcamRef]);
 
@@ -44,8 +46,37 @@ const CameraComponent = (
     .then((data) => {
       console.log(data);
       // NOW DO SOMETHING WITH IT
+
+      // update the right feedback
+      setFeedback(prevState => ({
+        ...prevState,
+        [stepNumber]: data.feedback
+      }))
+
+      // give points to the user
+      givePoints(data.points)
     })
     );
+  }
+
+  function givePoints(points) {
+
+    console.log("USERID AND POINTS: " + userId, points);
+    fetch('http://127.0.0.1:5000/adduserpoints', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+      }, 
+      body: JSON.stringify({ userId, points })
+      }
+    )
+    .then((res) => res.json()
+    .then((data) => {
+        console.log(points + 'points added!');      
+    })
+    );
+
   }
 
   return (

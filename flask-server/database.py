@@ -46,7 +46,7 @@ def add_user_points(userId, pointsToAdd):
 
     headers = {
         'X-API-KEY': 'neurelo_9wKFBp874Z5xFw6ZCfvhXTnM6mAQxbpYAG+rMHlUkUg1NZs9OSSnXGu+hGt+WzxXg1KWSeI1CI4UxtphVWMLJlxo0x0yYB9V6CoMi71wn51PMxM9BaSvlt4oiiiidzmMW2joJNLJXeKnqjrGbSVkyW0ULltx1Hu8V8Xu0KY/CFUVxz7qdbeh9Onc4kwcad+h_JYO6GNbVpQJuMPeOQA8Xg1PfJxXlt7ZujJj+r51x3k4=',
-        'Content-Type': 'application/x-www-form-urlencoded',
+        'Content-Type': 'application/x-www-form-urlencoded'
     }
 
     data = '{    "username": "' + username + '",    "password": "' + password + '",    "points": ' + str(existingPoints + pointsToAdd) + '}'

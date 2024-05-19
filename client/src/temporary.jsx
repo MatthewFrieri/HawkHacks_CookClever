@@ -1,9 +1,12 @@
 import { React, useContext } from 'react';
 import { MyContext } from './MyContext';
+import { FeedbackContext } from './MyContext';
 
 function Temporary() {
 
     const { userId, setUserId } = useContext(MyContext);
+
+
 
    // call the db and check if the credentials are valid
    fetch('http://127.0.0.1:5000/getuserpoints', {

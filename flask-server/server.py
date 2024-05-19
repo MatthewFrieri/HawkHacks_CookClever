@@ -1,6 +1,6 @@
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-from database import is_valid_credentials, add_user, get_user_points
+from database import is_valid_credentials, add_user, get_user_points, add_user_points
 from image_analysis import interpret_input
 
 app = Flask('my_server')
@@ -41,6 +41,15 @@ def getuserpoints():
     userId = data['userId']
     points = get_user_points(userId)
     return jsonify(points)
+
+@app.route('/adduserpoints', methods=['POST'])
+def adduserpoints():
+    data = request.json
+    userId = data['userId']
+    pointsToAdd = data['points']
+    result = add_user_points(userId, pointsToAdd)
+    return jsonify(result)
+
 
 
 if __name__ == '__main__':
