@@ -109,7 +109,7 @@ const CameraComponent = (
             audio={false}
             ref={webcamRef}
             screenshotFormat="image/jpeg"
-            style={{ width: '80vw', height: '100vh', display: 'flex', marginTop: '-200px', top: '15vh'}}
+            style={{ width: '80vw', height: '50vh', display: 'flex', marginTop: '-200px', top: '15vh'}}
             mirrored={true}
           />
         </div>
