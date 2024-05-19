@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState, useEffect, useContext } from 'react';
 import CameraComponent from './cameracomponent';
 import { useNavigate } from 'react-router-dom';
 import {
@@ -11,6 +11,7 @@ import {
   MDBInput,
   MDBIcon
 } from 'mdb-react-ui-kit';
+import { MyContext } from './MyContext';
 import './login.css';
 
 function Login() {
@@ -18,6 +19,8 @@ function Login() {
   const [usernameValue, setUsernameValue] = useState('')
   const [passwordValue, setPasswordValue] = useState('')
   const [isValidLogin, setIsValidLogin] = useState(false)
+
+  const { userId, setUserId } = useContext(MyContext);
 
   useEffect(() => {
     if (isValidLogin) {
@@ -31,7 +34,6 @@ function Login() {
 
   function handleLoginClick() {
 
-
     // call the db and check if the credentials are valid
     fetch('http://127.0.0.1:5000/authentication', {
       method: 'POST',
@@ -41,9 +43,22 @@ function Login() {
     )
     .then((res) => res.json()
     .then((isValid) => {
-      setIsValidLogin(isValid)
+      // isValid is either false or the user's id
+      if (isValid) {
+        setUserId(isValid)
+        setIsValidLogin(true)
+      }
+      else {
+        setUserId('')
+        setIsValidLogin(false)
+      }
     })
     );
+  }
+
+
+  function assign_user_id(userId) {
+    setUserId(userId)
   }
 
   const navigate = useNavigate();

@@ -16,7 +16,7 @@ def is_valid_credentials(username, password):
     db = get_db()
     for user in db['data']:
         if user['username'] == username and user['password'] == password:
-            return True
+            return user['id']
     return False
 
 def add_user(username, password):
@@ -29,9 +29,13 @@ def add_user(username, password):
     response = requests.post('https://us-west-2.aws.neurelo.com/rest/user/__one', headers=headers, data=data)
     return response
 
+def get_user_points(userId):
+    db = get_db()
+    for user in db['data']:
+        if user['id'] == userId:
+            return user['points']
 
 def add_user_points(userId, pointsToAdd):
-    
     db = get_db()
     for user in db['data']:
         if user['id'] == userId:
