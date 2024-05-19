@@ -1,7 +1,9 @@
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import Webcam from 'react-webcam';
 
-const CameraComponent = () => {
+const CameraComponent = (
+  req
+) => {
   
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [capturedPhoto, setCapturedPhoto] = useState(null);

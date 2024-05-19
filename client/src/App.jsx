@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './login';
 import Signup from './signup';
 import Home from './home';
-import Prep from './prep';
-import Pasta from './pasta';
+import Lesson from './Lesson';
+import Stirfry from './stirfry';
 import './App.css';
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/pasta" element={<Pasta />} />
-        <Route path="/prep" element={<Prep />} />
+        <Route path="/stirfry" element={<Stirfry />} />
+        <Route path="/Lesson" element={<Lesson />} />
       </Routes>
     </Router>
   );

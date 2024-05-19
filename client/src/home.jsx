@@ -11,7 +11,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleNext = () => {
-        navigate('/pasta');
+      navigate('/stirfry');
     };
 
     return (

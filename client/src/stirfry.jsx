@@ -1,17 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import pastaImage from './assets/pasta.png';
-import './pasta.css';
+import './stirfry.css';
 
-const Pasta = () => {
+const Stirfry = () => {
     const navigate = useNavigate();
 
     const handleNext = () => {
-        navigate('/prep');
-    };
-
-    const handleBack = () => {
-        navigate('/home');
+        navigate('/lesson');
     };
 
     return (
@@ -52,11 +48,8 @@ const Pasta = () => {
             <button onClick={handleNext} className="next-button">
                 Next
             </button>
-            <button onClick={handleBack} className="back-button">
-                Back
-            </button>
         </div>
     );
 };
 
-export default Pasta;
+export default Stirfry;

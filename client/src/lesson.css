@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.lesson-container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100vw;
+    height: 200vh;
+}
+
+.prep-ingre-tools {
+    margin: 10px;
+}
+
+.prep-container {
+    height: 100vh;
+    width: 100vw;
+}
+
+
+.preparation-header {
+    display: flex;
+    width: 100%;
+    height: 60px;
+    align-items: center;
+}
+
+.prep-back-button {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    align-self: center;
+    margin: 10px;
+    align-content: center;
+    justify-content: center;
+}
+
+.prep-camera-component {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.prep-footer {
+    display: flex;
+    position: absolute;
+    height: 60px;
+    width: 100%;
+    background-color: white;
+    bottom: 0;
+    align-items: right;
+    justify-content: right;
+}
+
