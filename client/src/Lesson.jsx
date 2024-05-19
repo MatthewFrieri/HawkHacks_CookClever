@@ -34,6 +34,9 @@ const Lesson = () => {
                         <i class="fa-solid fa-2x fa-arrow-left"></i>
                     </button>
                     <h1>Preparation</h1>
+                    <div className='prep-points'>
+
+                    </div>
                 </div>
                 <div className='prep-ingre-tools'>
                     <div className='prep-ingredients'>
@@ -54,7 +57,11 @@ const Lesson = () => {
                 
                 <div className='prep-instructions'>
                     <p>
-                        Instructions: Upload an image of all your ingredients and tools lined up below:
+                        Cooking Instructions: Gather all the ingredients and tool listed above, and prepare a clean works space. 
+                    </p>
+                    <b />       
+                    <p>
+                        Image Instructions: Take a picture of all your ingredients and tools lined up and click th analyze button to see how you did.
                     </p>
                 </div>
                 <div className='prep-camera-component'>
@@ -75,7 +82,12 @@ const Lesson = () => {
             </div>
 
             <div className='sec2-container'>
-                
+                <div className='preparation-header'>
+                    <button className='prep-back-button' onClick={handleBack}>
+                        <i class="fa-solid fa-2x fa-arrow-left"></i>
+                    </button>
+                    <h1>Preparation</h1>
+                </div>
             </div>
         </div>    
   );

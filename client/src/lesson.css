@@ -58,10 +58,12 @@ body {
     display: flex;
     justify-content: center;
     width: 100vw;
+    max-height: 300px;
 }
 
 .prep-instructions {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 10px;
