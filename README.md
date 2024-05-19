@@ -8,7 +8,7 @@ Javascript, MongoDB Atlas, Neurelo, Google AI Studio, and GoDaddy.
 Why cook with us?
 CookClever leverages Google AI Studio and Image Recognition to deliver a seamless and intuitive learning experience both new and experienced chefs.
 
-Inspiration behind the Idea.
+Inspiration behind the idea.
 On our first night of the hackathon, our team was amongst 80% of the crowd who raised their hand because they did not know how to cook. We quickly realized that this was a prompt and
 issue we could address with the latest technologies today. 
 
