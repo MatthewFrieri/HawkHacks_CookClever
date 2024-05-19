@@ -1,6 +1,8 @@
 import { React, useState, useEffect, useContext } from 'react';
 import CameraComponent from './cameracomponent';
 import { useNavigate } from 'react-router-dom';
+import tomato from './assets/tomato.png'
+import lettuce from './assets/lettuce.png'
 import {
   MDBBtn,
   MDBContainer,
@@ -92,6 +94,9 @@ function Login() {
   return (
 
     <div id="container">
+      <div className="back"></div>
+      <img id='tomato' src={tomato} alt="" />
+      <img id='lettuce' src={lettuce} alt="" />
       <header>
         <h1>Login</h1>
       </header>
@@ -108,14 +113,15 @@ function Login() {
           <MDBInput value={passwordValue} onChange={(e) => {setPasswordValue(e.target.value)}} type='password' />
         </span>
         <button id="btn1" onClick={handleLoginClick}>Login</button>
+        <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
+
+        <p>
+          Don't have an account? <a href="/signup">Sign Up</a>
+        </p>
       </div>
 
 
-      <p className="small mb-3 pb-lg-2"><a className="text-white-50" href="#!">Forgot password?</a></p>
-
-      <p>
-        Don't have an account? <a href="/signup">Sign Up</a>
-      </p>
+     
     </div>
   );
 }

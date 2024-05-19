@@ -1,3 +1,19 @@
+#tomato {
+  position: fixed;
+  width: 700px;
+  top: 130px;
+  left: 20px;
+  z-index: -2;
+}
+
+#lettuce {
+  position: fixed;
+  width: 500px;
+  top: 250px;
+  left: -250px;
+  z-index: -1;
+}
+
 header {
   background-color: rgb(250 154 45) !important;
   height: 60px;
@@ -5,8 +21,16 @@ header {
   align-items: center;
 }
 
-#container {
+.back {
+  position: fixed;
   background-color: rgb(255 192 120);
+  width: 100vw;
+
+  height: 100vh;
+  z-index: -2;
+}
+
+#container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -14,11 +38,16 @@ header {
 }
 
 #square-container {
-  background-color: rgba(0, 0, 0, .1) !important;
+  background-color: rgba(0, 0, 0, .2) !important;
   border-radius: 20px;
   width: 80%;
   margin-top: 50px;
   
+}
+
+#square-container p {
+  text-align: center;
+  color: white;
 }
 
 #btn1 {

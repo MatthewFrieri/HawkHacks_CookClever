@@ -51,7 +51,8 @@ def interpret_input(imageBase64, requirements):
         The defined requirements are: {requirements}.
 
         Return a python dictionary with the key "points" representing a score out of 10. 
-        Establish this score based on how well it meets the defined requirements. 
+        Establish this score strictly based on how well it meets the defined requirements.
+        A score of 10 should only be awarded if all the requirements are met. 
         Also include the key "feedback" in the python dictionary, 
         representing some feedback based on how well the picture met the requirements.
         Give the feedback in a positive tone that promotes learning.'''

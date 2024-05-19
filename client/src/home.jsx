@@ -21,7 +21,7 @@ const Home = () => {
             </header>
             <main>
                 <div className="grid">
-                    <div className="content">
+                    <div className="content" onClick={handleNext}>
                         <img src={stirfryImage} alt="Picture of Stirfry" className="image" />
                         <p className="description">
                         This is a picture of a delicious Stirfry. This vegetarian stirfry mix is packed with vibrant vegetables.
@@ -46,9 +46,6 @@ const Home = () => {
                         </p>
                     </div>
                 </div>
-                <button onClick={handleNext} className="nextButton">
-                    Next
-                </button>
             </main>
         </div>
     );
