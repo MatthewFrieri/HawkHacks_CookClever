@@ -20,7 +20,6 @@ const CameraComponent = (
 
   const webcamRef = useRef(null);
 
-
   const openCamera = () => {
     setIsCameraOpen(true);
   };

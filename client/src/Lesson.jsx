@@ -7,13 +7,15 @@ import './lesson.css'
 const Lesson = () => {
 
     const navigate = useNavigate();
+
+    const sec2Ref = useRef(null);
     
     const handleBack = () => {
         navigate('/stirfry');
     };
 
     const handleNext = () => {
-
+        ref.current.scrollIntoView({ behaviour: 'smooth', block: 'start'})
     }
 
     const { feedback, setFeedback } = useContext(FeedbackContext);
@@ -81,7 +83,7 @@ const Lesson = () => {
                 
             </div>
 
-            <div className='sec2-container'>
+            <div className='sec2-container' ref={sec2Ref}>
                 <div className='preparation-header'>
                     <button className='prep-back-button' onClick={handleBack}>
                         <i class="fa-solid fa-2x fa-arrow-left"></i>
