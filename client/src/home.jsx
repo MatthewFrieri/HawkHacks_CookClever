@@ -11,7 +11,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleNext = () => {
-      navigate('/prep');
+      navigate('/pasta');
     };
 
   return (
@@ -35,9 +35,6 @@ const Home = () => {
             <p className="description">
               This is a picture of roast chicken. It's a well-loved dish, perfect for any occasion.
             </p>
-            <button onClick={handleNext}>
-            Next
-          </button>
         </div>
           <div className="content">
             <img src={burritoBowl} alt="Burrito Bowl" className="image" />
@@ -51,6 +48,9 @@ const Home = () => {
               This is a picture of a sandwich. Perfect for a quick and delicious snack.
             </p>
           </div>
+          <button onClick={handleNext}>
+            Next
+          </button>
         </div>
       </main>
     </div>
