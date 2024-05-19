@@ -1,57 +1,30 @@
-.signup-container {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #121212;
-  }
-  
-  .signup-card {
-    border-radius: 1rem;
-    max-width: 400px;
-    width: 100%;
-  }
-  
-  .input-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-  
-  .MDBInput {
-    width: 100%;
-  }
-  
-  .MDBInput label {
-    color: white !important;
-  }
-  
-  .MDBInput input {
-    color: white !important;
-    background-color: transparent !important;
-    border-color: #ccc !important;
-  }
-  
-  .signup-button {
-    margin-top: 20px;
-    width: 100%;
-    text-align: center;
-  }
-  
-  @media (max-width: 768px) {
-    .signup-card {
-      width: 90%;
-    }
-  
-    .signup-container {
-      padding: 20px;
-    }
-  
-    .input-wrapper {
-      padding: 0 10px;
-    }
-  
-    .signup-button {
-      width: 90%;
-    }
-  }  
+#big-container {
+  background-color: rgb(255 192 120);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+}
+
+#big-container span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#big-container span p {
+  margin: 10px 10px 0 0;
+}
+
+#square-box {
+  background-color: rgba(0, 0, 0, .1) !important;
+  border-radius: 20px;
+  width: 80%;
+  margin-top: 50px;
+}
+
+#big-container button {
+  margin: 20px 0;
+}
