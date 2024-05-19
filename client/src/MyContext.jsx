@@ -37,3 +37,21 @@ const FeedbackProvider = ({ children }) => {
 };
 
 export { FeedbackContext, FeedbackProvider };
+
+
+
+
+
+const PointsContext = createContext();
+
+const PointsProvider = ({ children }) => {
+  const [userPoints, setUserPoints] = useState(0);
+
+  return (
+    <PointsContext.Provider value={{ userPoints, setUserPoints }}>
+      {children}
+    </PointsContext.Provider>
+  );
+};
+
+export { PointsContext, PointsProvider };

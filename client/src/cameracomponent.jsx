@@ -1,6 +1,7 @@
 import React, { useState, useRef, useCallback, useEffect, useContext } from 'react';
 import Webcam from 'react-webcam';
 import { MyContext, FeedbackContext } from './MyContext';
+import { PointsContext } from './MyContext';
 
 const CameraComponent = (
   {req, stepNumber}
@@ -8,6 +9,7 @@ const CameraComponent = (
   
   const { userId, setUserId } = useContext(MyContext);
   const { feedback, setFeedback } = useContext(FeedbackContext);
+  const { userPoints, setUserPoints } = useContext(PointsContext)
 
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const [capturedPhoto, setCapturedPhoto] = useState(null);
@@ -77,7 +79,10 @@ const CameraComponent = (
     )
     .then((res) => res.json()
     .then((data) => {
-        console.log(points + 'points added!');      
+        console.log(points + 'points added!');   
+
+        setUserPoints(userPoints + points)
+
     })
     );
 

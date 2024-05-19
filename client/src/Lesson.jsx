@@ -1,22 +1,26 @@
-import {React, useContext} from 'react';
+import {React, useContext, useRef} from 'react';
 import CameraComponent from './cameracomponent';
 import { useNavigate } from 'react-router-dom';
-import { FeedbackContext } from './MyContext';
+import { FeedbackContext, PointsContext } from './MyContext';
 import './lesson.css'
 
 const Lesson = () => {
 
     const navigate = useNavigate();
+
+    const sec2ref = useRef(null);
     
     const handleBack = () => {
         navigate('/stirfry');
     };
 
     const handleNext = () => {
-
+        window.scrollTo({top: sec2ref.current.offsetTop, behavior: 'smooth'});
     }
 
     const { feedback, setFeedback } = useContext(FeedbackContext);
+    const { userPoints, setUserPoints } = useContext(PointsContext)
+   
 
     const Requirements = {
         one: 'The ingredients should be aligned.',
@@ -35,7 +39,7 @@ const Lesson = () => {
                     </button>
                     <h1>Preparation</h1>
                     <div className='prep-points'>
-
+                        <p>{userPoints}</p>
                     </div>
                 </div>
                 <div className='prep-ingre-tools'>
@@ -82,12 +86,12 @@ const Lesson = () => {
                 
             </div>
 
-            <div className='sec2-container'>
+            <div className='sec2-container' ref={sec2ref}>
                 <div className='preparation-header'>
                     <button className='prep-back-button' onClick={handleBack}>
                         <i class="fa-solid fa-2x fa-arrow-left"></i>
                     </button>
-                    <h1>Preparation</h1>
+                    <h1>Chopping</h1>
                 </div>
             </div>
         </div>    

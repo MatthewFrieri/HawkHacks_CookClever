@@ -11,7 +11,7 @@ import {
   MDBInput,
   MDBIcon
 } from 'mdb-react-ui-kit';
-import { MyContext } from './MyContext';
+import { MyContext, PointsContext } from './MyContext';
 import './login.css';
 
 function Login() {
@@ -21,6 +21,7 @@ function Login() {
   const [isValidLogin, setIsValidLogin] = useState(false)
 
   const { userId, setUserId } = useContext(MyContext);
+  const { userPoints, setUserPoints } = useContext(PointsContext)
 
   useEffect(() => {
     if (isValidLogin) {
@@ -47,6 +48,7 @@ function Login() {
       if (isValid) {
         setUserId(isValid)
         setIsValidLogin(true)
+        getuserpoints(isValid)
       }
       else {
         setUserId('')
@@ -56,10 +58,29 @@ function Login() {
     );
   }
 
+  function getuserpoints(userId) {
 
-  function assign_user_id(userId) {
-    setUserId(userId)
+    console.log('user id issss:' + userId);
+    fetch('http://127.0.0.1:5000/getuserpoints', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, OPTIONS'
+      }, 
+      body: JSON.stringify({ userId })
+      }
+    )
+    .then((res) => res.json()
+    .then((points) => {
+      console.log('i have this many points: ' + points);
+      setUserPoints(points)
+      // console.log(data);
+    })
+    );
+
   }
+
+
 
   const navigate = useNavigate();
 
