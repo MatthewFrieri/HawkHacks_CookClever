@@ -21,16 +21,16 @@ body {
     margin-bottom: 10px;
 }
 
-.pasta-image {
-    max-width: 100%;
+.stirfry-image {
+    max-width: 80%; /* Adjust the max-width to make the image smaller */
     height: auto;
     margin-bottom: 10px;
 }
 
 .nutritional-facts {
-    text-align: center;
+    text-align: left; /* Align text to the left for better readability */
     max-width: 100%;
-    margin-bottom: 10px;
+    margin: 10px 0; /* Add margin to reduce the gap between image and text */
 }
 
 .bottom-section {
@@ -56,17 +56,23 @@ body {
 }
 
 @media (min-width: 414px) {
-    .top-section, .bottom-section {
+    .top-section {
         flex-direction: row;
         justify-content: space-between;
+        align-items: flex-start; /* Align items to the start to reduce gap */
     }
 
-    .pasta-image, .nutritional-facts {
+    .stirfry-image, .nutritional-facts {
         max-width: 45%;
     }
 
+    .bottom-section {
+        flex-direction: row; /* Arrange ingredients and utensils side by side */
+        justify-content: space-between;
+    }
+
     .ingredients, .utensils {
-        width: 45%;
+        width: 45%; /* Adjust width for better alignment */
         margin-bottom: 0;
     }
 }

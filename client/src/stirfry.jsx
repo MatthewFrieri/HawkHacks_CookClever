@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import pastaImage from './assets/pasta.png';
+import stirfryImage from './assets/stir-fry.png';
 import './stirfry.css';
 
 const Stirfry = () => {
@@ -14,13 +14,12 @@ const Stirfry = () => {
         navigate('/lesson');
     };
 
-
     return (
         <div className="container">
             <button onClick={handleBack}>Back</button>
-            <h1 className="title">Classic Italian Pasta</h1>
+            <h1 className="title">Vegetarian Stirfry Mix</h1>
             <div className="top-section">
-                <img src={pastaImage} alt="Pasta" className="pasta-image" />
+                <img src={stirfryImage} alt="Stirfry" className="stirfry-image" />
                 <div className="nutritional-facts">
                     <p>Calories: 330</p>
                     <p>Vitamins: A, B, C</p>
@@ -51,9 +50,7 @@ const Stirfry = () => {
                     </ul>
                 </div>
             </div>
-            <button onClick={handleNext} className="next-button">
-                Next
-            </button>
+            <button onClick={handleNext} className="next-button">Next</button>
         </div>
     );
 };

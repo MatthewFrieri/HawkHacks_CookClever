@@ -1,5 +1,5 @@
 import React from 'react';
-import pastaImage from './assets/pasta.png';
+import stirfryImage from './assets/stir-fry.png';
 import roastChickenImage from './assets/roastchicken.png';
 import { useNavigate } from 'react-router-dom';
 import burritoBowl from './assets/burritobowl.png';
@@ -23,9 +23,9 @@ const Home = () => {
                 <Temporary></Temporary>
                 <div className="grid">
                     <div className="content">
-                        <img src={pastaImage} alt="Picture of pasta" className="image" />
+                        <img src={stirfryImage} alt="Picture of Stirfry" className="image" />
                         <p className="description">
-                            This is a picture of a delicious pasta. It's a traditional dish with a rich history and amazing taste.
+                        This is a picture of a delicious Stirfry. This vegetarian stirfry mix is packed with vibrant vegetables.
                         </p>
                     </div>
                     <div className="content">
