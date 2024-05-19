@@ -8,7 +8,7 @@ const Prep = () => {
     const navigate = useNavigate();
     
     const handleNext = () => {
-        navigate('/home');
+        navigate('/pasta');
     };
     
   return (
