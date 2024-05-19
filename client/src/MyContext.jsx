@@ -24,9 +24,9 @@ const FeedbackContext = createContext();
 
 const FeedbackProvider = ({ children }) => {
   const [feedback, setFeedback] = useState({
-    one: 'preppy',
-    two: 'choppy',
-    three: 'fries'
+    one: '',
+    two: '',
+    three: ''
   })
 
   return (
