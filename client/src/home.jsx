@@ -4,7 +4,6 @@ import roastChickenImage from './assets/roastchicken.png';
 import { useNavigate } from 'react-router-dom';
 import burritoBowl from './assets/burritobowl.png';
 import sandwich from './assets/sandwich.png';
-import Temporary from './temporary';
 import './home.css';
 
 const Home = () => {
