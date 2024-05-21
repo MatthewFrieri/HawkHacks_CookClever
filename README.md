@@ -1,35 +1,40 @@
-# CookClever 🧑‍🍳
+# CookClever 👨‍🍳🔥
 
-**What is CookClever? 🍎**
+#### Created By: Naresh Godwin, Masood Ashrafi, Matthew Frieri, and Sehaj Lally
 
-CookClever is an enjoyable cooking mobile application that uses artificial intelligence and machine learning to judge the users cooking ability, and provides them with an overall score.
-On top of being a cooking app that teaches the user how to cook and their nutritional facts, AI/ML is used to analyze user input photos of their ingredients cut out, and their final product.
-Any applicable feedback is provided to the user both on their set up of ingredients and final cumulative work. A meal that passes awards the user in-game points and a "you have cooked" 
-status for the meal. A meal that fails punishes the user by giving them fewer points, and a "you are cooked" status for the meal. Technologies used to make this project include Python,
-Javascript, MongoDB Atlas, Neurelo, Google AI Studio, and GoDaddy. 
+<img width="252" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/f640c5ef-dce8-47de-8700-86bea85d21fa">
+<img width="252" alt="DEMO2" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/14ae1d5c-5e6f-4fd6-be24-8ea0e5271276">
+<img width="237" alt="DEMO3" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/84392475/8d31fa11-dde9-47b8-ac51-ab0fe0e81daa">
+<img width="238" alt="DEMO4" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
 
-**Why cook with us? 🍳**
+### What is CookClever? 🍳
 
-CookClever leverages Google AI Studio and Image Recognition to deliver a seamless and intuitive learning experience both new and experienced chefs.
+CookClever is an innovative web app designed to help people learn how to cook. It offers a wide range of recipes with detailed, step-by-step instructions to guide users through the cooking process. At each step, users are prompted to take a picture of their progress. Using AI, CookClever analyzes these images and provides tailored feedback to help users improve their cooking skills. Additionally, users earn points based on how well they follow the instructions, making cooking a fun and rewarding experience.
 
-**Inspiration 💡**
+ ### Inspiration 💡
 
-On our first night of the hackathon, our team was amongst 80% of the crowd who raised their hand because they did not know how to cook. We quickly realized 
-that this was a prompt and
-issue we could address with the latest technologies today. 
+During the opening ceremony of our hackathon, we found ourselves among the many hackers who admitted to not knowing how to cook. This realization inspired us to identify an opportunity to utilize cutting-edge technologies to address this widespread challenge.
 
-**What we Learned! 🤔**
+### Why Cook with Us? 🌟
 
-Throughout this project, our team gained knowledge of creating a working backend with Python and Flask as well as using Neurelo to get our own working APIs. We also further developed our
-front end skills and were able to try and connect our front end and back end.
+- **Interactive Learning:** CookClever offers a hands-on approach to learning how to cook. Our step-by-step instructions and real-time feedback ensure you learn by doing.
+- **AI-Powered Feedback:** Our AI, built using Google AI Studio, analyzes your cooking at each step, providing personalized tips to help you improve.
+- **Gamification:** Earn points for completing steps accurately and track your progress on leaderboards. Challenge yourself and your friends to become better cooks!
+- **Diverse Recipes:** Whether you're a beginner or an experienced cook, our extensive recipe collection caters to all skill levels and dietary preferences.
 
-**What's Next? ⏩️**
+### What We Learned 📚
 
-Our next steps would involve fully improving our UI and functionality.
+Throughout the development of CookClever, our team gained valuable insights and skills, including:
 
-<img width="342" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/f640c5ef-dce8-47de-8700-86bea85d21fa">
-<img width="342" alt="DEMO2" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/14ae1d5c-5e6f-4fd6-be24-8ea0e5271276">
-<img width="342" alt="DEMO3" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/84392475/8d31fa11-dde9-47b8-ac51-ab0fe0e81daa">
-<img width="342" alt="DEMO4" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
+- **React Development:** Building a responsive and dynamic user interface with React.
+- **Backend Integration:** Using Python and Flask to create a robust backend that handles user data, recipe information, and AI feedback efficiently.
+- **Database Management:** Implementing MongoDB to store and manage user information, recipes, images, and feedback securely.
+- **API Development:** Creating custom APIs with Neurelo to facilitate seamless communication between the frontend and backend.
+- **AI Integration:** Leveraging Google AI Studio to develop and integrate machine learning models that provide real-time feedback based on user-submitted images.
+- **User Experience Design:** Focusing on user-centric design principles to ensure the app is intuitive, engaging, and easy to use.
 
-Made by Naresh Godwin, Masood Ashrafi, Matthew Frieri, and Sehaj Lally in HawkHacks (Hackathon) 2024. All rights reserved.
+### What's Next? 🚀
+
+We plan to enhance CookClever with a redesigned, intuitive UI for seamless use across all devices, and introduce multimedia feedback, including annotated images and personalized video tips, along with step-by-step video guides to further improve the cooking experience.
+
+*Made by Naresh Godwin, Masood Ashrafi, Matthew Frieri, and Sehaj Lally in HawkHacks (Hackathon) 2024. All rights reserved.*
