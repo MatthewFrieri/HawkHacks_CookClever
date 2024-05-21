@@ -2,10 +2,10 @@
 
 #### Created By: Naresh Godwin, Masood Ashrafi, Matthew Frieri, and Sehaj Lally
 
-<img width="252" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/f640c5ef-dce8-47de-8700-86bea85d21fa">
-<img width="252" alt="DEMO2" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/14ae1d5c-5e6f-4fd6-be24-8ea0e5271276">
-<img width="237" alt="DEMO3" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/84392475/8d31fa11-dde9-47b8-ac51-ab0fe0e81daa">
-<img width="238" alt="DEMO4" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
+<img width="207" alt="DEMO1" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/f640c5ef-dce8-47de-8700-86bea85d21fa">
+<img width="208" alt="DEMO2" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/14ae1d5c-5e6f-4fd6-be24-8ea0e5271276">
+<img width="196" alt="DEMO3" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/84392475/8d31fa11-dde9-47b8-ac51-ab0fe0e81daa">
+<img width="198" alt="DEMO4" src="https://github.com/nareshgodwin1/HawkHacks_reactapp/assets/159673662/bcd0ae74-6518-4bc8-a9fe-2357c33cd68f">
 
 ### What is CookClever? 🍳
 
